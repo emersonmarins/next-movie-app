@@ -8,6 +8,60 @@
   --background-end-rgb: 255, 255, 255;
 }
 
+:root {
+  --body-color: #232323;
+  --main-color: rgb(253, 192, 78);
+  --hover-color: rgb(172, 112, 0);
+  --container-color: #333333;
+  --text-color: #fafafa;
+}
+
+:root {
+  --color-background: #1C1714;
+  --color-background-light: #f1f1f1;
+  --color-background-blue: linear-gradient(to left, rgb(68, 2, 223), rgb(79, 172, 248));
+  --color-background-yellow: linear-gradient(to left, rgb(255, 227, 69), rgb(255, 174, 0));
+  --color-background-yellowRight: linear-gradient(to right, rgb(255, 227, 69), rgb(255, 174, 0));
+  --color-background-cianoDark: linear-gradient(to left, rgb(3, 211, 159), rgb(2, 95, 56));
+  --color-background-orangeDark: linear-gradient(to left, rgb(255, 157, 29), rgb(121, 64, 0));
+  --color-background-orangeDarkRight: linear-gradient(to right, rgb(255, 157, 29), rgb(121, 64, 0));
+  --color-01: #C97636;
+  --color-02: #914B16;
+  --color-03: #003D45;
+  --color-04: #32DAF0;
+  --color-text-01: #fff;
+  --color-text-02: #dbdbdb;
+  --color-text-03: #cecece;
+  --color-text-04: #a8a8a8;
+  --color-text-05: #000000;
+  --color-text-06: #1a1a1a;
+  --color-text-07: rgb(255, 157, 29);
+  --color-text-08: rgb(3, 211, 159);
+  --color-background-deg01: #232323;
+  --color-background-deg02: #1b1b1b;
+  --color-background-deg03: #131313;
+  --color-background-deg04: #0b0b0b;
+  --color-background-deg05: #030303;
+  --color-background2: #0e070c;
+  --color-background3: #1d1822;
+  --color-background-gradient: linear-gradient(#0b0a0c, #0b080e, #0e0714);
+  --color-05: #36123B;
+  --color-06: #9539ff;
+  --color-07: #3D0045;
+  --color-08: #b479f8;
+  --color-09: #B53BC6;
+  --color-10: rgb(77, 52, 127);
+  --color-11: #7f1be4;
+  --step--2: clamp(0.6075rem, 0.5063rem + 0.405vw, 0.9113rem);
+  --step--1: clamp(0.7294rem, 0.6079rem + 0.4858vw, 1.0938rem);
+  --step-0: clamp(0.875rem, 0.7292rem + 0.5833vw, 1.3125rem);
+  --step-1: clamp(1.05rem, 0.875rem + 0.7vw, 1.575rem);
+  --step-2: clamp(1.26rem, 1.05rem + 0.84vw, 1.89rem);
+  --step-3: clamp(1.5119rem, 1.2598rem + 1.0083vw, 2.2681rem);
+  --step-4: clamp(1.8144rem, 1.5119rem + 1.21vw, 2.7219rem);
+  --step-5: clamp(2.1775rem, 1.8148rem + 1.4508vw, 3.2656rem);
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -18,16 +72,38 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: var(--body-color);
 }
 
+.navbar__link{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 300;
+  font-size: 0.9em;
+}
+.navbar__link__title {
+  color: var(--color-text-01);
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+span,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+div
+{
+  color: var(--color-text-01);
+}
+.hidden {
+  display: none;
 }
